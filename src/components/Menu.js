@@ -3,8 +3,12 @@ import { HomeLink, AboutLink, ContactLink } from './Navlist';
 
 export default function Menu() {
 
+  const style = {
+    backgroundColor: 'red'
+  }
+
   return (
-    <>
+    <div style = {style}>
       <ul>
         <li>
           <button>
@@ -22,7 +26,7 @@ export default function Menu() {
           </button>
         </li>
       </ul>
-    </>
+    </div>
 
   )
 }
