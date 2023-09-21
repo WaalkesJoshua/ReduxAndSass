@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d public",
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon server.js",
     "dev": "npx webpack --mode development",
