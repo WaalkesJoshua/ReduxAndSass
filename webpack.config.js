@@ -5,7 +5,7 @@ const { DefinePlugin } = require('webpack');
 module.exports = {
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'public'),
+    path: path.resolve(__dirname),
     filename: 'bundle.js'
   },
   module: {
@@ -29,7 +29,7 @@ module.exports = {
   },
   plugins:[
     new DefinePlugin({
-      'process.env.PUBLIC_URL': JSON.stringify('https://waalkesjoshua.github.io/ReduxAndSass/'),
+      'process.env.PUBLIC_URL': JSON.stringify('https://waalkesjoshua.github.io/MyPortfolio/'),
     })
   ],
   watch: true

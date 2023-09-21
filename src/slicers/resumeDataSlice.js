@@ -13,5 +13,5 @@ export const resumeDataSlice = createSlice({
 
 })
 
-export const { setFile } = resumeDataSlicer.actions;
+export const { setFile } = resumeDataSlice.actions;
 export default resumeDataSlice.reducer;
