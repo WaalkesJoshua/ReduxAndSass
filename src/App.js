@@ -8,7 +8,7 @@ import Contact from './components/contact/contact';
 
 export default function App() {
   return (
-    <Router>
+    <Router homepage="/ReduxAndSass">
       <Navbar/>
       <Routes>
         <Route exact path='/home' element={< Home />} />

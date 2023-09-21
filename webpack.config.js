@@ -1,4 +1,6 @@
 const path = require('path');
+const { DefinePlugin } = require('webpack');
+
 
 module.exports = {
   entry: './src/index.js',
@@ -25,5 +27,10 @@ module.exports = {
       }
     ]
   },
+  plugins:[
+    new DefinePlugin({
+      'process.env.PUBLIC_URL': JSON.stringify('https://waalkesjoshua.github.io/ReduxAndSass/'),
+    })
+  ],
   watch: true
 };
