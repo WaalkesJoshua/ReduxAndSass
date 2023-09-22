@@ -21,6 +21,7 @@ export default function Resume() {
     >
       {isError &&
         <h6>Error Loading Resume</h6>}
+        <p>Test from friday</p>
       <Document
         file={process.env.PUBLIC_URL + "/Joshua_Waalkes_Resume.pdf"}
         onLoadError={() => {
