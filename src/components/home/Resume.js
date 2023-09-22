@@ -12,7 +12,7 @@ export default function Resume() {
       <h3>Resume</h3>
       <iframe
         className="resumeViewer"
-        src="../../../Joshua_Waalkes_Resume.pdf"
+        src="/Joshua_Waalkes_Resume.pdf"
         width="100%"
         height="1200px"
         title={currentYear + "Resume"}
