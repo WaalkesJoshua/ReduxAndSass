@@ -20,9 +20,9 @@ export default function Resume() {
       }}
     >
       {isError &&
-        <h6>Error Loading </h6>}
+        <h6>Error Loading Resume</h6>}
       <Document
-        file="/Joshua_Waalkes_Resume.pdf"
+        file={process.env.PUBLIC_URL + "/Joshua_Waalkes_Resume.pdf"}
         onLoadError={() => {
           dispatch(setError(true));
         }}
