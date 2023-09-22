@@ -1,14 +1,14 @@
 // colors.js
 export const darkColors = {
-  background: '#0D282B',
-  primary: '#2D5C96',
+  background: '#2D5C96',
+  primary: '#856100',
   secondary: '#820D15',
   text: '#FFFFFF',
 };
 
 export const lightColors = {
-  background: '#E4B866',
-  primary: '#40C6FF',
+  background: '#69BFE3',
+  primary: '#E4B866',
   secondary: '#EC1F1F',
   text: '#2D2D2C',
 };

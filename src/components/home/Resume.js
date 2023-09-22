@@ -1,29 +1,40 @@
 import React, { useState } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
+import { useSelector, useDispatch } from 'react-redux';
+import { setError } from '../../slicers/resumeDataSlice';
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 export default function Resume() {
-  const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
-
-  function onDocumentLoadSuccess({ numPages }) {
-    setNumPages(numPages);
-  }
+  const isError = useSelector((state) => state.resume.isError);
+  const dispatch = useDispatch();
 
   return (
-    <div>
-      
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
+      {isError &&
+        <h6>Error Loading </h6>}
       <Document
-
         file="/Joshua_Waalkes_Resume.pdf"
-        onLoadSuccess={onDocumentLoadSuccess}
+        onLoadError={() => {
+          dispatch(setError(true));
+        }}
       >
-        <Page pageNumber={pageNumber} />
+        <Page
+          pageNumber={pageNumber}
+          width={600}
+          height={600}
+          renderTextLayer={false} // Disable text layer
+          renderAnnotationLayer={false} //Disable annotations
+        />
       </Document>
-      <p>
-        Page {pageNumber} of {numPages}
-      </p>
-    </div>
+    </ div>
   );
 }
