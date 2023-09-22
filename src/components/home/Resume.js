@@ -1,47 +1,29 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { setData, setDataURL, setError } from '../../slicers/resumeDataSlice';
+import React, { useState } from 'react';
+import { Document, Page, pdfjs } from 'react-pdf';
+
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 export default function Resume() {
-  const dispatch = useDispatch();
-  const pdfDataURL = useSelector((state) => state.resume.pdfDataURL);
-  const isError = useSelector((state) => state.resume.isError);
-  const googleDriveURL = useSelector((state) => state.resume.googleDriveURL);
-  const corsProxyUrl = 'https://cors-anywhere.herokuapp.com/';
+  const [numPages, setNumPages] = useState(null);
+  const [pageNumber, setPageNumber] = useState(1);
 
-  useEffect(() => {
-    fetch(corsProxyUrl + googleDriveURL)
-      .then((response) => response.blob())
-      .then((data) => {
-        const dataURL = URL.createObjectURL(data);
-        dispatch(setData(data));
-        dispatch(setDataURL(dataURL));
-      })
-      .catch((e) => {
-        console.error('Error fetching PDF file from: ' + googleDriveURL);
-        dispatch(setError(true))
-      });
-  }, []);
-
+  function onDocumentLoadSuccess({ numPages }) {
+    setNumPages(numPages);
+  }
 
   return (
     <div>
-      <h3>Resume</h3>
-      //Ultimately I want to use react-pdf
-      {isError &&
-        <p>Error loading resume pdf</p>}
-      {(pdfDataURL && !isError) ? (
-      <iframe
-        className="resumeViewer"
-        src={pdfDataURL}
-        width="75%"
-        height="1200px"
-        title="Resume"
-      />
-      ) : (
-        <p>Loading Resume ...</p>
-      )}
-      <button onClick={() => { alert("This button doesn't do anything yet!") }}> Download as a PDF </button>
+      
+      <Document
+
+        file="/Joshua_Waalkes_Resume.pdf"
+        onLoadSuccess={onDocumentLoadSuccess}
+      >
+        <Page pageNumber={pageNumber} />
+      </Document>
+      <p>
+        Page {pageNumber} of {numPages}
+      </p>
     </div>
-  )
+  );
 }

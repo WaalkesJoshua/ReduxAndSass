@@ -21,7 +21,6 @@ export const resumeDataSlice = createSlice({
       }
     }
   }
-
 })
 
 export const { setData, setDataURL, setError } = resumeDataSlice.actions;
