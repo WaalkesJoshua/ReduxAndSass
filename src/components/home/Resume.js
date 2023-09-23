@@ -42,7 +42,8 @@ export default function Resume() {
         width={600}
         height={800}
       >
-        {/* <p>This should only show if embed tag fails</p> */}
+{isError &&
+        <h6>Error Loading Resume</h6>}
       </embed>
     </ div>
   );

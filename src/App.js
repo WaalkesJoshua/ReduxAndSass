@@ -19,11 +19,11 @@ export default function App() {
 
   return (
     <div className="app" style={ style }>
-      <Router homepage="/ReduxAndSass">
+      <Router homepage="/MyPortfolio">
         <Navbar />
         <Routes>
-          <Route exact path='/home' element={< Home />} />
-          <Route path='*' element={< Navigate to='/home' />} />
+          <Route exact path='/' element={< Home />} />
+          {/* <Route path='*' element={< Navigate to='/home' />} /> */}
           <Route exact path='/about' element={< About />} />
           <Route exact path='/contact' element={< Contact />} />
         </Routes>
