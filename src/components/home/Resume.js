@@ -21,9 +21,9 @@ export default function Resume() {
     >
       {isError &&
         <h6>Error Loading Resume</h6>}
-        <p>Test from friday</p>
+        <p>Test from Saturday</p>
       <Document
-        file={process.env.PUBLIC_URL + "/Joshua_Waalkes_Resume.pdf"}
+        file="../../../public/Joshua_Waalkes_Resume.pdf"
         onLoadError={() => {
           dispatch(setError(true));
         }}
@@ -36,6 +36,14 @@ export default function Resume() {
           renderAnnotationLayer={false} //Disable annotations
         />
       </Document>
+      <embed
+        style={{marginTop: "10px"}}
+        src="../../../public/Joshua_Waalkes_Resume.pdf"
+        width={600}
+        height={800}
+      >
+        {/* <p>This should only show if embed tag fails</p> */}
+      </embed>
     </ div>
   );
 }
