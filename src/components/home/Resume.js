@@ -41,10 +41,7 @@ export default function Resume() {
         src="../../../public/Joshua_Waalkes_Resume.pdf"
         width={600}
         height={800}
-      >
-{isError &&
-        <h6>Error Loading Resume</h6>}
-      </embed>
+      />
     </ div>
   );
 }
