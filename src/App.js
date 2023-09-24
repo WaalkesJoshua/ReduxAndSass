@@ -7,6 +7,7 @@ import About from './components/about/About';
 import Contact from './components/contact/Contact';
 import { useTheme } from './styles/ThemeProvider';
 
+
 export default function App() {
   const { theme } = useTheme();
 

@@ -29,8 +29,8 @@ module.exports = {
   },
   plugins:[
     new DefinePlugin({
-      'process.env.PUBLIC_URL': JSON.stringify('https://waalkesjoshua.github.io/MyPortfolio/'),
-    })
+      'process.env.LOCAL_ENVIRONMENT': JSON.stringify(process.env.LOCAL_ENVIRONMENT),
+    }),
   ],
   watch: true
 };
