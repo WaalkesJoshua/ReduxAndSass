@@ -3,6 +3,7 @@ const { DefinePlugin } = require('webpack');
 
 
 module.exports = {
+
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname),
@@ -27,10 +28,5 @@ module.exports = {
       }
     ]
   },
-  plugins:[
-    new DefinePlugin({
-      'process.env.PUBLIC_URL': JSON.stringify('https://waalkesjoshua.github.io/MyPortfolio/'),
-    })
-  ],
   watch: true
 };

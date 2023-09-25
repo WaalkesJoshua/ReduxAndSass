@@ -3,15 +3,16 @@ import { createSlice } from '@Reduxjs/toolkit';
 export const resumeDataSlice = createSlice({
   name: 'resume',
   initialState: {
-    pdfFile: null
+    isError: false
   },
   reducers: {
-    setFile: (state, {payload}) => {
-      state.pdfFile = payload;
+    setError: (state, { payload }) => {
+      if(payload === true || payload === false) {
+        state.isError = payload;
+      }
     }
   }
-
 })
 
-export const { setFile } = resumeDataSlice.actions;
+export const { setError } = resumeDataSlice.actions;
 export default resumeDataSlice.reducer;
