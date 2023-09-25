@@ -3,6 +3,7 @@ const { DefinePlugin } = require('webpack');
 
 
 module.exports = {
+
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname),
@@ -27,10 +28,5 @@ module.exports = {
       }
     ]
   },
-  plugins:[
-    new DefinePlugin({
-      'process.env.LOCAL_ENVIRONMENT': JSON.stringify(process.env.LOCAL_ENVIRONMENT),
-    }),
-  ],
   watch: true
 };

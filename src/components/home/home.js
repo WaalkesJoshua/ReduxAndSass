@@ -15,7 +15,6 @@ export default function Home () {
       alignItems: 'center',
       width: '100%',
       height: '100%',
-      border: 'solid blue 2px'
     }}>
     <h1>Home Page</h1>
     < Resume/>
