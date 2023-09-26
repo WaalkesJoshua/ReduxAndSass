@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/styles.scss';
+import './styles/globalStyles.scss';
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/home/Home';
@@ -20,11 +20,11 @@ export default function App() {
 
   return (
     <div className="app" style={ style }>
-      <Router homepage="/MyPortfolio">
+      <Router basename="/MyPortfolio">
         <Navbar />
         <Routes>
           <Route exact path='/home' element={< Home />} />
-          {/* <Route path='*' element={< Navigate to='/home' />} /> */}
+          <Route path='*' element={< Navigate to='/home' />} />
           <Route exact path='/about' element={< About />} />
           <Route exact path='/contact' element={< Contact />} />
         </Routes>

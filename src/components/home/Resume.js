@@ -55,14 +55,11 @@ export default function Resume() {
         <p>{`Test from ${today}`}</p>
       <Document
         file={pdfBlobURL}
-        onLoadError={() => {
-          dispatch(setError(true));
-        }}
       >
         <Page
           pageNumber={1}
           width={600}
-          height={600}
+          // height={600}
           renderTextLayer={false} // Disable text layer
           renderAnnotationLayer={false} //Disable annotations
         />

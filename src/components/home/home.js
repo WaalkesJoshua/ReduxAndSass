@@ -1,13 +1,13 @@
 import React from 'react';
 import Resume from './Resume';
+import '../../styles/home.scss'
 
 
 export default function Home () {
 
-  //created resumeReducer to handle pulling data from google apis
-
   return (
     <div
+    className="home-container"
     style={{
       display: 'flex',
       flexDirection: 'column',
@@ -19,6 +19,5 @@ export default function Home () {
     <h1>Home Page</h1>
     < Resume/>
     </div>
-
   )
 }
