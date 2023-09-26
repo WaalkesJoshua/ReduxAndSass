@@ -1,23 +1,29 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Resume from './Resume';
-import '../../styles/home.scss'
+import '../../styles/home.scss';
+import { useTheme } from '../../styles/ThemeProvider';
 
 
-export default function Home () {
+export default function Home({ getCurrentSection }) {
+  const { theme } = useTheme();
+
+  const style = {
+  };
+
+  useEffect(() => {
+    getCurrentSection();
+  }, []);
 
   return (
     <div
-    className="home-container"
-    style={{
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center',
-      width: '100%',
-      height: '100%',
-    }}>
-    <h1>Home Page</h1>
-    < Resume/>
+      className="home-container"
+      style={style}
+    >
+      <h1>Home Page</h1>
+      <section id="resume-section">
+        <h3>Resume</h3>
+        < Resume />
+      </section>
     </div>
   )
 }

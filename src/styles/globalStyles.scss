@@ -7,6 +7,7 @@ body, html {
   margin: 0;
   padding: 0;
   height: 100%;
+  overflow-y: auto;
 }
 
 * {
@@ -15,25 +16,19 @@ body, html {
 
 @mixin button-styles {
   // Common button styles go here
+  background-color: var(--button-background);
   padding: 10px 20px;
-  background-color: #396d67;
-  color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 
   &:hover {
-    background-color: #0056b3;
-  }
-
-  &:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+    background-color: var(--button-hover-background);
   }
 }
 
 // Usage example: Apply the button-styles mixin to a button
-.button {
+button {
   @include button-styles;
 }
 

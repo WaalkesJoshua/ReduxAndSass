@@ -1,8 +1,12 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Carousel from '../utils/Carousel';
 
 
-export default function About () {
+export default function About ({getCurrentSection}) {
+
+  useEffect(() => {
+    getCurrentSection();
+  }, []);
 
   const aboutMeData = [
     {title: "something about me", body: "aint that neat"},
@@ -14,7 +18,10 @@ export default function About () {
   return (
     <>
     <h1>About Page</h1>
+    <section id="aboutMeCarousel">
+      <h3>Fun Facts</h3>
     <Carousel cardData={aboutMeData} />
+    </section>
     </>
   )
 }
