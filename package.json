@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "This is a page to highlight my software engineering expertise",
   "main": "index.js",
+  "homepage": "https://https://waalkesjoshua.github.io/MyPortfolio/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d . -b gh-pages",
