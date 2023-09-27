@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './styles/globalStyles.scss';
-import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, Navigate, redirect } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/home/Home';
 import About from './components/about/About';
@@ -31,6 +31,7 @@ export default function App() {
   return (
     <div className="app" style={ style }>
       <Router basename="/MyPortfolio">
+      {/* <Router> */}
         <Navbar sections={sections} />
         <Routes>
           <Route exact path='/home' element={< Home getCurrentSection={getCurrentSection} />} />

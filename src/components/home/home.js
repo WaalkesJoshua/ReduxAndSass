@@ -8,6 +8,7 @@ export default function Home({ getCurrentSection }) {
   const { theme } = useTheme();
 
   const style = {
+    // '--home-bg-color': theme.secondary,
   };
 
   useEffect(() => {
@@ -17,7 +18,7 @@ export default function Home({ getCurrentSection }) {
   return (
     <div
       className="home-container"
-      style={style}
+      // style={style}
     >
       <h1>Home Page</h1>
       <section id="resume-section">

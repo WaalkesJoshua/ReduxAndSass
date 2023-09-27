@@ -9,15 +9,8 @@ export default function Navbar({ sections }) {
 
 
   const navbarStyle = {
-    backgroundColor: theme.primary,
+    backgroundColor: theme.primary
   }
-  // const buttonStyle = {
-  //   backgroundColor: theme.button,
-
-  //   ':hover': {
-  //     backgroundColor: theme.secondary,
-  //   }
-  // }
 
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
