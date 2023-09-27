@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import Resume from './Resume';
+import React, { useEffect, Suspense } from 'react';
+const Resume = React.lazy(() => import('./Resume'));
 import '../../styles/home.scss';
 import { useTheme } from '../../styles/ThemeProvider';
 
@@ -22,7 +22,9 @@ export default function Home({ getCurrentSection }) {
       <h1>Home Page</h1>
       <section id="resume-section">
         <h3>Resume</h3>
-        < Resume />
+        <Suspense fallback={<div>Loading...</div>}>
+          < Resume />
+        </Suspense>
       </section>
     </div>
   )

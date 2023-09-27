@@ -1,5 +1,6 @@
 const path = require('path');
 const { DefinePlugin } = require('webpack');
+const TerserPlugin = require('terser-webpack-plugin');
 
 
 module.exports = {
@@ -8,6 +9,17 @@ module.exports = {
   output: {
     path: path.resolve(__dirname),
     filename: 'bundle.js'
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new TerserPlugin({
+        terserOptions: {
+          parse: {},
+          compress: {},
+          mangle: true,
+      }}),
+    ]
   },
   module: {
     rules: [
