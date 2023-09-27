@@ -1,6 +1,7 @@
 #root {
   height: 100%;
   width: 100%;
+  color: var(--text-color);
 }
 
 body, html {
@@ -12,6 +13,11 @@ body, html {
 
 * {
   box-sizing: border-box;
+}
+
+.app {
+  color: var(--text-color);
+  background-color: var(--global-background);
 }
 
 @mixin button-styles {
@@ -29,6 +35,8 @@ body, html {
 
 // Usage example: Apply the button-styles mixin to a button
 button {
+  color: var(--text-color);
   @include button-styles;
 }
+
 

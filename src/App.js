@@ -22,8 +22,8 @@ export default function App() {
   }
 
   const style = {
-    backgroundColor: theme.background,
-    color: theme.text,
+    '--global-background': theme.background,
+    '--text-color': theme.text,
     '--button-background' : theme.button,
     '--button-hover-background': theme.secondary
   }

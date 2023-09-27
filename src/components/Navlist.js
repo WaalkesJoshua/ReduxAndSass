@@ -1,27 +1,36 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
-export function HomeLink() {
+export function HomeLink({closeMenu}) {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/home");
+    closeMenu();
+  }
   return (
-    <button>
-      <Link to="/home"> An amazing home page </Link>
-    </button>
+    <button onClick={handleClick} className="nav-button">Home</button>
   )
 }
 
-export function AboutLink() {
+export function AboutLink({closeMenu}) {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/about");
+    closeMenu();
+  }
   return (
-    <button>
-      <Link to="/about"> About this guy </Link>
-    </button>
+    <button onClick={handleClick} className="nav-button">Learn About Me</button>
   )
 }
 
-export function ContactLink() {
+export function ContactLink({closeMenu}) {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/contact");
+    closeMenu();
+  }
   return (
-    <button>
-      <Link to="/contact"> Contact Me </Link>
-    </button>
+    <button onClick={handleClick}className="nav-button">Contact Me</button>
   )
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import { HomeLink, AboutLink, ContactLink } from './Navlist';
 import Menu from './Menu';
 import { useTheme } from '../styles/ThemeProvider';
+import '../styles/navbar.scss';
 
 
 export default function Navbar({ sections }) {
@@ -9,7 +10,11 @@ export default function Navbar({ sections }) {
 
 
   const navbarStyle = {
-    backgroundColor: theme.primary
+    '--navbar-background': theme.primary,
+    '--navbar-button': theme.button,
+    '--text-color': theme.text,
+    '--portal-border': theme.secondary,
+    '--portal-background': theme.highlight,
   }
 
   const scrollToSection = (id) => {
@@ -25,18 +30,19 @@ export default function Navbar({ sections }) {
       style={navbarStyle}
     >
       <Menu />
+      <div id="navbar-button-container">
       {sections.map((section) => {
         return (
           <button
-            className="navbar-button"
+            className="section-nav-button"
             key={section.id}
-            // style={buttonStyle}
             onClick={() => scrollToSection(section.id)}
           >
             {section.heading}
           </button>
         )
       })}
+      </div>
     </div>
   )
 }
