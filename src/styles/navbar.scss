@@ -1,3 +1,7 @@
+// Breakpoints
+$mobile: 480px;
+$tablet: 768px;
+
 #navbar {
   position: sticky;
   top: 0;
@@ -44,7 +48,14 @@
   flex-direction: column;
   justify-content:center;
   align-items: center;
-}
+
+  @media(max-width: $mobile){
+  width: fit-content;
+  height: auto;
+  background-color: var(--portal-background);
+  border: none;
+  border-radius: 0;
+}}
 
 .nav-button {
   margin: 1% 0;

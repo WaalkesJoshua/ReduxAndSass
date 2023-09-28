@@ -7,11 +7,11 @@ import { setError } from '../../slicers/resumeDataSlice';
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 export default function Resume() {
-  const [pdfBlobURL, setPDFBlobURL ] = useState(null);
+  const [pdfBlobURL, setPDFBlobURL] = useState(null);
+  const [pdfDimension, setPdfDimensions] = useState({ width: 0 })
   const isError = useSelector((state) => state.resume.isError);
   const dispatch = useDispatch();
   const pdfPath = 'https://waalkesjoshua.github.io/MyPortfolio/Joshua_Waalkes_Resume.pdf';
-  let today = new Date();
 
   const downloadPDF = async () => {
     const a = document.createElement('a');
@@ -23,11 +23,11 @@ export default function Resume() {
     a.remove();
   }
 
-  useEffect( () => {
+  useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(pdfPath);
-        if(!response.ok) {
+        if (!response.ok) {
           throw new Error('Failed to fetch pdf');
           dispatch(setError(true));
         }
@@ -40,32 +40,29 @@ export default function Resume() {
       }
     };
     fetchData();
+
+    const containerWidth = document.getElementById('resume-section').offsetWidth;
+    const newDimensions = {
+      width: containerWidth * .5
+    };
+    setPdfDimensions(newDimensions);
   }, [])
 
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
-    >
-        <p>{`Test from ${today}`}</p>
+    <div>
       <Document
         file={pdfBlobURL}
       >
         <Page
           pageNumber={1}
-          width={600}
-          // height={600}
+          width={pdfDimension.width}
           renderTextLayer={false} // Disable text layer
           renderAnnotationLayer={false} //Disable annotations
         />
       </Document>
-    <button onClick={downloadPDF}>Download</button>
-    {isError &&
+      <button onClick={downloadPDF}>Download</button>
+      {isError &&
         <h6>Error Downloading Resume</h6>}
     </ div>
   );

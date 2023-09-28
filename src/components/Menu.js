@@ -11,9 +11,7 @@ export default function Menu() {
 
   const handleMenuClick = () => {
     setMenuOpen(!menuOpen);
-    console.log(menuOpen);
   }
-
 
   return (
     <div id="drop-down-menu">
