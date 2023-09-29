@@ -1,20 +1,20 @@
 // colors.js
 export const darkColors = {
-  background: '#3A1B1F',
-  primary: '#435441',
-  secondary: '#E0C37F',
-  highlight: '#2D5C96',
-  error: '#820D15',
-  button: '#B26449',
-  text: '#FFFFFF',
+  background: '#3A1B1F', //maroon
+  primary: '#435441', //green
+  secondary: '#2D5C96', //blue
+  highlight: '#D8B970', //highlight
+  error: '#B0010D', //red
+  button: '#A4482A', //sandy red
+  text: '#FFFFFF', // white
 };
 
 export const lightColors = {
-  background: '#E4B866',
-  primary: '#9E3E2E',
-  secondary: '#E0C37F',
-  highlight: '#69BFE3',
+  background: '#BF5A49', //lighter versions
+  primary: '#5E6E4B',
+  secondary: '#69BFE3',
+  highlight: '#AFAFAF',
   error: '#EC1F1F',
-  button: '#A56D3A',
-  text: '#4E5552',
+  button: '#E0C37F',
+  text: '#171717', //slate
 };

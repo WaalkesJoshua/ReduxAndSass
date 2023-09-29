@@ -4,10 +4,10 @@
   color: var(--text-color);
 }
 
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
-  height: 100%;
   overflow-y: auto;
 }
 
@@ -17,6 +17,7 @@ body, html {
 
 .app {
   color: var(--text-color);
+  min-height: 100vh;
   background-color: var(--global-background);
 }
 
@@ -39,4 +40,37 @@ button {
   @include button-styles;
 }
 
+#wavy-seperator {
+  position: relative;
+  margin: 2%;
+  width: 200vw;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  animation: wave 10s linear infinite;
+}
 
+@mixin seperator-styles {
+  width: 5vw;
+  height: 2vw;
+  border-radius: 50%;
+}
+
+.wavy-sep-top {
+  @include seperator-styles;
+  border-top: 3px solid var(--wavy-sep-dot);
+}
+
+.wavy-sep-bottom {
+  @include seperator-styles;
+  border-bottom: 3px dashed var(--wavy-sep-dot);
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(-50vw);
+  }
+  100% {
+    transform: translateX(50vw);
+  }
+}

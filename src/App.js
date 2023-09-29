@@ -25,7 +25,8 @@ export default function App() {
     '--global-background': theme.background,
     '--text-color': theme.text,
     '--button-background' : theme.button,
-    '--button-hover-background': theme.secondary
+    '--button-hover-background': theme.highlight,
+    '--wavy-sep-dot': theme.secondary,
   }
 
   return (

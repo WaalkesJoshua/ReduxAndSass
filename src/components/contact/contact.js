@@ -13,12 +13,12 @@ export default function Contact({ getCurrentSection }) {
   }, []);
 
   return (
-    <>
+    <div className="contact-container">
       <h1>Contact Page</h1>
       <section id="contact-cards">
         <h3>Lets Connect</h3>
         <Paper cardData={testData} />
       </section>
-    </>
+    </div>
   )
 }
