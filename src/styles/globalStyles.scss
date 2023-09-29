@@ -1,14 +1,12 @@
 #root {
   height: 100%;
   width: 100%;
-  color: var(--text-color);
 }
 
 body,
 html {
   margin: 0;
   padding: 0;
-  overflow-y: auto;
 }
 
 * {
@@ -16,27 +14,27 @@ html {
 }
 
 .app {
-  color: var(--text-color);
+  color: var(--theme-text);
   min-height: 100vh;
   background-color: var(--global-background);
 }
 
 @mixin button-styles {
   // Common button styles go here
-  background-color: var(--button-background);
+  background-color: var(--theme-button);
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 
   &:hover {
-    background-color: var(--button-hover-background);
+    background-color: var(--theme-highlight);
   }
 }
 
 // Usage example: Apply the button-styles mixin to a button
 button {
-  color: var(--text-color);
+  color: var(--theme-text);
   @include button-styles;
 }
 
@@ -58,12 +56,12 @@ button {
 
 .wavy-sep-top {
   @include seperator-styles;
-  border-top: 3px solid var(--wavy-sep-dot);
+  border-top: 3px solid var(--theme-secondary);
 }
 
 .wavy-sep-bottom {
   @include seperator-styles;
-  border-bottom: 3px dashed var(--wavy-sep-dot);
+  border-bottom: 3px dashed var(--theme-secondary);
 }
 
 @keyframes wave {
@@ -74,3 +72,44 @@ button {
     transform: translateX(50vw);
   }
 }
+
+.card {
+  height: 20vh;
+  width: 20vw;
+  background-color: var(--theme-primary);
+  border: solid 2px var(--theme-highlight);
+  border-radius: 15% 0;
+  margin: 5%;
+
+  .card-title {
+    position: relative;
+    left:10%;
+    top: 1%;
+    width: 80%;
+    margin-bottom: 2%;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: var(--theme-button);
+    font-size:x-large;
+    font-weight: bold;
+    text-wrap: pretty;
+  }
+
+  .card-body {
+    position: relative;
+    left:5%;
+    width: 90%;
+    text-align: center;
+    text-wrap: pretty;
+  }
+}
+
+.paper {
+  width: 75%;
+  height: 90%;
+  background-color: var(--theme-button);
+  margin: 5%;
+  box-shadow: 10px 10px 2px 2 var(--theme-secondary);
+}
+
+

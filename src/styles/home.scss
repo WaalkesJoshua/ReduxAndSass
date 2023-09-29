@@ -4,17 +4,26 @@ $tablet: 768px;
 
 
 .home-container {
-  // height: 200%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+section {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-#resume-section {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.card-data-grid {
+  border: solid 5px blue;
+  position: relative;
+  width: 90%;
+  margin: 5%;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }

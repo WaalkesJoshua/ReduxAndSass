@@ -1,18 +1,10 @@
 import React from 'react';
-import Card from './Card';
 
-export default function Paper({ cardData }) {
-
-  const dataArr = Array.isArray(cardData) ? cardData : [cardData];
+export default function Paper({ children }) {
 
   return (
-    <>
-      {dataArr.map((data, index) => {
-        const { title, body } = data;
-        return (
-          <Card key={index} title={title} body={body} />
-        )
-      })}
-    </>
+    <div className="paper">
+      {children}
+    </div>
   )
 }

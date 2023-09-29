@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import './styles/globalStyles.scss';
 import { BrowserRouter as Router, Routes, Route, Link, Navigate, redirect } from 'react-router-dom';
 import Navbar from './components/Navbar';
@@ -23,16 +23,17 @@ export default function App() {
 
   const style = {
     '--global-background': theme.background,
-    '--text-color': theme.text,
-    '--button-background' : theme.button,
-    '--button-hover-background': theme.highlight,
-    '--wavy-sep-dot': theme.secondary,
+    '--theme-primary': theme.primary,
+    '--theme-secondary': theme.secondary,
+    '--theme-highlight': theme.highlight,
+    '--theme-error': theme.error,
+    '--theme-button': theme.button,
+    '--theme-text': theme.text,
   }
 
   return (
-    <div className="app" style={ style }>
+    <div className="app" style={style}>
       <Router basename="/MyPortfolio">
-      {/* <Router> */}
         <Navbar sections={sections} />
         <Routes>
           <Route exact path='/home' element={< Home getCurrentSection={getCurrentSection} />} />

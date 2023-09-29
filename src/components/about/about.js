@@ -13,7 +13,7 @@ export default function About ({getCurrentSection}) {
     {title: "something else", body: "wow"},
     {title: "all about me", body: "how about that"},
     {title: "me me me", body: "aint that cool"}
-  ]
+  ];
 
   return (
     <>
