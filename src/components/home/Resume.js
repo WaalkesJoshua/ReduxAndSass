@@ -61,7 +61,7 @@ export default function Resume() {
           renderAnnotationLayer={false} //Disable annotations
         />
       </Document>
-      <button onClick={downloadPDF}>Download</button>
+      <button className="download-resume-button" onClick={downloadPDF}>Download</button>
       {isError &&
         <h6>Error Downloading Resume</h6>}
     </ div>

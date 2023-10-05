@@ -12,10 +12,10 @@ export default function Home({ getCurrentSection }) {
   const { theme } = useTheme();
 
   const highlightData = [
-    { title: "something about me", body: "aint that neat" },
-    { title: "something else", body: "wow" },
-    { title: "all about me", body: "how about that" },
-    { title: "me me me", body: "aint that cool" }
+    { title: "1", body: "aint that neat" },
+    { title: "2", body: "wow" },
+    { title: "3", body: "how about that" },
+    { title: "4", body: "aint that cool" }
   ];
 
   const techStackData = [

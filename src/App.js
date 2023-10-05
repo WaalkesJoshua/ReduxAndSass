@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './styles/globalStyles.scss';
+import './styles/utilStyles.scss';
 import { BrowserRouter as Router, Routes, Route, Link, Navigate, redirect } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/home/Home';

@@ -34,6 +34,7 @@ export default function Navbar({ sections }) {
       <span id="wave" />
       <Menu />
       <div id="navbar-button-container">
+        <p className="jump-to-section">Jump To Section:</p>
         {sections.map((section) => {
           return (
             <button
