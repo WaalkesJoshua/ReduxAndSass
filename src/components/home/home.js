@@ -1,24 +1,69 @@
-import React from 'react';
-import Resume from './Resume';
+import React, { useEffect, Suspense } from 'react';
+const Resume = React.lazy(() => import('./Resume'));
+import '../../styles/home.scss';
+import { useTheme } from '../../styles/ThemeProvider';
+import Seperator from '../utils/Seperator';
+import Explore from '../utils/Explore';
+import Carousel from '../utils/Carousel';
+import Paper from '../utils/Paper';
+import Card from '../utils/Card';
 
 
-export default function Home () {
+export default function Home({ getCurrentSection }) {
+  const { theme } = useTheme();
 
-  //created resumeReducer to handle pulling data from google apis
+  const highlightData = [
+    { title: "1", body: "aint that neat" },
+    { title: "2", body: "wow" },
+    { title: "3", body: "how about that" },
+    { title: "4", body: "aint that cool" }
+  ];
+
+  const techStackData = [
+    { title: "tech1", body: "some techf" },
+    { title: "tech2", body: "wow, how techy" },
+    { title: "tech3", body: "how about that tech" },
+    { title: "tech4", body: "cool stuff" }
+  ];
+
+  const style = {
+  };
+
+  useEffect(() => {
+    getCurrentSection();
+  }, []);
 
   return (
     <div
-    style={{
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center',
-      width: '100%',
-      height: '100%',
-    }}>
-    <h1>Home Page</h1>
-    < Resume/>
+      className="home-container"
+      style={style}
+    >
+      <h1>Home Page</h1>
+      <section id="resume-section">
+        <h3>Resume</h3>
+        <Suspense fallback={<div>Loading...</div>}>
+          < Resume />
+        </Suspense>
+      </section>
+      <Explore />
+      <section id="highlights-section">
+        <h3>Highlights</h3>
+        <Carousel id="highlight-car" cardData={highlightData} />
+      </section>
+      <Explore />
+      <section id="tech-stack-section">
+        <h3>Tech Stack</h3>
+        <Paper>
+          <div className="card-data-grid">
+            {techStackData.map((data, index) => {
+              const { title, body } = data;
+              return (
+                <Card key={index} title={title} body={body} />
+              )
+            })}
+          </div>
+        </Paper>
+      </section>
     </div>
-
   )
 }

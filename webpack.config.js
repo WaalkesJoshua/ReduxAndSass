@@ -1,5 +1,6 @@
 const path = require('path');
 const { DefinePlugin } = require('webpack');
+const TerserPlugin = require('terser-webpack-plugin');
 
 
 module.exports = {
@@ -8,6 +9,18 @@ module.exports = {
   output: {
     path: path.resolve(__dirname),
     filename: 'bundle.js'
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new TerserPlugin({
+        terserOptions: {
+          parse: {},
+          compress: {},
+          mangle: true,
+        }
+      }),
+    ]
   },
   module: {
     rules: [
@@ -25,7 +38,18 @@ module.exports = {
           'css-loader',
           'sass-loader'
         ]
-      }
+      },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+            },
+          },
+        ],
+      },
     ]
   },
   watch: true
