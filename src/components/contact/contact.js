@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import Paper from '../utils/Paper';
+import Card from '../utils/Card';
 
 
 export default function Contact({ getCurrentSection }) {
@@ -17,7 +18,16 @@ export default function Contact({ getCurrentSection }) {
       <h1>Contact Page</h1>
       <section id="contact-cards">
         <h3>Lets Connect</h3>
-        <Paper cardData={testData} />
+        <Paper>
+          <div className="card-data-grid">
+            {testData.map((data, index) => {
+              const { title, body } = data;
+              return (
+                <Card key={index} title={title} body={body} />
+              )
+            })}
+          </div>
+        </Paper>
       </section>
     </div>
   )

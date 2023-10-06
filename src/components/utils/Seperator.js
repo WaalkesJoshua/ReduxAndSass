@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Seperator () {
+export default function Seperator() {
   return (
     <div id="wavy-seperator">
       <div className="wavy-sep-top"></div>

@@ -12,6 +12,7 @@ import { useTheme } from './styles/ThemeProvider';
 export default function App() {
   const { theme } = useTheme();
   const [sections, setSections] = useState([]);
+  const isMobile = (window.innerWidth <= 768);
 
   const getCurrentSection = () => {
     let sections = Array.from(document.querySelectorAll('section')).map((section) => ({
@@ -30,12 +31,13 @@ export default function App() {
     '--theme-error': theme.error,
     '--theme-button': theme.button,
     '--theme-text': theme.text,
+    '--theme-altText': theme.altText
   }
 
   return (
     <div className="app" style={style}>
       <Router basename="/MyPortfolio">
-        <Navbar sections={sections} />
+        <Navbar sections={sections} isMobile={isMobile} />
         <Routes>
           <Route exact path='/home' element={< Home getCurrentSection={getCurrentSection} />} />
           <Route path='*' element={< Navigate to='/home' />} />

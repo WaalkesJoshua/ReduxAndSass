@@ -7,14 +7,16 @@ export const darkColors = {
   error: '#B0010D', //red
   button: '#A4482A', //sandy red
   text: '#FFFFFF', // white
+  altText: '#B9CAEE'
 };
 
 export const lightColors = {
   background: '#BF5A49', //lighter versions
   primary: '#5E6E4B',
   secondary: '#69BFE3',
-  highlight: '#AFAFAF',
+  highlight: '#A8A0C2',
   error: '#EC1F1F',
-  button: '#E0C37F',
-  text: '#171717', //slate
+  button: '#DD7119',
+  text:'#171717',
+  altText: '#E2E2B4'
 };

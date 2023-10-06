@@ -20,12 +20,12 @@ $tablet: 768px;
 
 .wavy-sep-top {
   @include seperator-styles;
-  border-top: 3px solid var(--theme-secondary);
+  border-top: 5px solid var(--theme-secondary);
 }
 
 .wavy-sep-bottom {
   @include seperator-styles;
-  border-bottom: 3px dashed var(--theme-secondary);
+  border-bottom: 5px dashed var(--theme-secondary);
 }
 
 @keyframes wave {
@@ -119,12 +119,42 @@ $tablet: 768px;
 }
 
 .carousel-button {
-  padding-right: 0;
-  writing-mode: vertical-rl;
-  text-orientation: upright;
-  text-align: center;
   font-size: 1.4em;
   border-radius: 2%;
   width: 7%;
   height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  p {
+    margin: 0;
+  }
+}
+
+.mountain-svg-container {
+  position: relative;
+  background-color: var(--theme-highlight);
+  margin: 2%;
+  width: 200vw;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  animation: mountains 20s linear infinite;
+}
+
+.mountain-svg {
+  width: 20vw;
+  height: 10vh;
+}
+
+@keyframes mountains {
+  0% {
+    transform: translateX(-50vw);
+  }
+
+  100% {
+    transform: translateX(50vw);
+  }
 }

@@ -17,10 +17,12 @@ html {
   color: var(--theme-text);
   min-height: 100vh;
   background-color: var(--global-background);
+  background-image: url("../images/camp_badge.svg");
+  background-repeat:repeat-x repeat-y;
+  background-size: 20vw;
 }
 
 @mixin button-styles {
-  // Common button styles go here
   background-color: var(--theme-button);
   padding: 10px 20px;
   border: none;
@@ -36,6 +38,19 @@ html {
 button {
   color: var(--theme-text);
   @include button-styles;
+}
+
+section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-margin-top: 10vh;
+
+  h3 {
+    color: var(--theme-altText)
+  }
 }
 
 

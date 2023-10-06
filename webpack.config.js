@@ -18,7 +18,8 @@ module.exports = {
           parse: {},
           compress: {},
           mangle: true,
-      }}),
+        }
+      }),
     ]
   },
   module: {
@@ -37,7 +38,18 @@ module.exports = {
           'css-loader',
           'sass-loader'
         ]
-      }
+      },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+            },
+          },
+        ],
+      },
     ]
   },
   watch: true

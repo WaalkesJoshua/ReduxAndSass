@@ -21,7 +21,16 @@ export default function Carousel({ cardData }) {
 
   return (
     <div className="carousel-container">
-      <button className="carousel-button prev" onClick={handlePrevClick}>Previous</button>
+      <button className="carousel-button prev" onClick={handlePrevClick}>
+        <p>P</p>
+        <p>R</p>
+        <p>E</p>
+        <p>V</p>
+        <p>I</p>
+        <p>O</p>
+        <p>U</p>
+        <p>S</p>
+      </button>
       <div className="slides">
         <div className={`carousel-card`} >
           <Card title={prevCard.title}
@@ -39,7 +48,12 @@ export default function Carousel({ cardData }) {
           />
         </div>
       </div>
-      <button className="carousel-button next" onClick={handleNextClick}>Next</button>
+      <button className="carousel-button next" onClick={handleNextClick}>
+        <p>N</p>
+        <p>E</p>
+        <p>X</p>
+        <p>T</p>
+      </button>
     </div>
   )
 }

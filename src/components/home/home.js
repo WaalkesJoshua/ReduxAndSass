@@ -3,6 +3,7 @@ const Resume = React.lazy(() => import('./Resume'));
 import '../../styles/home.scss';
 import { useTheme } from '../../styles/ThemeProvider';
 import Seperator from '../utils/Seperator';
+import Explore from '../utils/Explore';
 import Carousel from '../utils/Carousel';
 import Paper from '../utils/Paper';
 import Card from '../utils/Card';
@@ -44,12 +45,12 @@ export default function Home({ getCurrentSection }) {
           < Resume />
         </Suspense>
       </section>
-      <Seperator />
+      <Explore />
       <section id="highlights-section">
         <h3>Highlights</h3>
         <Carousel id="highlight-car" cardData={highlightData} />
       </section>
-      <Seperator />
+      <Explore />
       <section id="tech-stack-section">
         <h3>Tech Stack</h3>
         <Paper>
