@@ -1,22 +1,22 @@
-// colors.js
+// // colors.js
 export const darkColors = {
   background: '#3A1B1F', //maroon
-  primary: '#435441', //green
-  secondary: '#2D5C96', //blue
-  highlight: '#D8B970', //highlight
+  primary: '#A24502', //dark orange
+  secondary: '#1D2A10', //dark green
+  highlight: '#CD8A39', //yellow tan
   error: '#B0010D', //red
-  button: '#A4482A', //sandy red
+  button: '#0F578A', //medium green
   text: '#FFFFFF', // white
-  altText: '#B9CAEE'
+  altText: '#DFD0BB', //greenish black
 };
 
 export const lightColors = {
-  background: '#BF5A49', //lighter versions
-  primary: '#5E6E4B',
-  secondary: '#69BFE3',
-  highlight: '#A8A0C2',
-  error: '#EC1F1F',
-  button: '#DD7119',
-  text:'#171717',
-  altText: '#E2E2B4'
+  background: '#BF5A49', //lighter maroon
+  primary: '#CC7952', //lighter orange
+  secondary: '#769476', // light green
+  highlight: '#E5BD77', // light tan yellow
+  error: '#EC1F1F', //bright red
+  button: '#56A1D6', // medium light blue
+  text:'#171717', //black
+  altText: '#DFD0BB' //tanish white
 };

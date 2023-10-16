@@ -31,23 +31,32 @@ export default function Carousel({ cardData }) {
         <p>U</p>
         <p>S</p>
       </button>
+      {numCards > 0 ?
       <div className="slides">
         <div className={`carousel-card`} >
-          <Card title={prevCard.title}
+        <Card
+            iconSrc={prevCard.iconSrc}
+            title={prevCard.title}
             body={prevCard.body}
           />
         </div>
         <div className={`carousel-card center`} >
-          <Card title={currentCard.title}
+          <Card
+            iconSrc={currentCard.iconSrc}
+            title={currentCard.title}
             body={currentCard.body}
           />
         </div>
         <div className={`carousel-card`} >
-          <Card title={nextCard.title}
+        <Card
+            iconSrc={nextCard.iconSrc}
+            title={nextCard.title}
             body={nextCard.body}
           />
         </div>
       </div>
+      : <p> Loading... </p> }
+
       <button className="carousel-button next" onClick={handleNextClick}>
         <p>N</p>
         <p>E</p>

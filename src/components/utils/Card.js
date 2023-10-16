@@ -1,12 +1,18 @@
 import React from 'react';
-import {useTheme} from '../../styles/ThemeProvider';
+import { useTheme } from '../../styles/ThemeProvider';
 
-export default function Card({ title, body, id }) {
-
+export default function Card({ title, body, id, iconSrc }) {
   return (
     <div className="card" id={id || ""} >
-      <div className="card-title">{title}</div>
-      <div className="card-body">{body} </div>
+      {iconSrc ?
+        <img className="card-icon" src={iconSrc} />
+        : null}
+      {title ?
+        <div className="card-title">{title}</div>
+        : null}
+      {body ?
+        <div className="card-body">{body} </div>
+        : null}
     </div>
   )
 }
