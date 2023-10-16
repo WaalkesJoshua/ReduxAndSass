@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route, Link, Navigate, redirect } from
 import Navbar from './components/Navbar';
 import Home from './components/home/Home';
 import About from './components/about/About';
-import Contact from './components/contact/Contact';
+import Contact from './components/Contact/Contact';
 import { useTheme } from './styles/ThemeProvider';
 
 

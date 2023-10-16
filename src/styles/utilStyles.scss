@@ -45,16 +45,24 @@ $tablet: 768px;
   border: solid 2px var(--theme-highlight);
   border-radius: 10% 3%;
   margin: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  .card-icon {
+    position: relative;
+    left: 32.5%;
+    height: 35%;
+    width : 35%;
+    margin-top: 5%;
+  }
 
   .card-title {
     position: relative;
     left: 10%;
-    top: 1%;
     width: 80%;
-    margin-bottom: 2%;
+    margin: 3% 0;
     text-align: center;
-    text-decoration: underline;
-    text-decoration-color: var(--theme-button);
     font-size: 1.7vw;
     font-weight: bold;
     text-wrap: pretty;
@@ -78,7 +86,7 @@ $tablet: 768px;
   height: 90%;
   background-color: var(--theme-button);
   margin: 5%;
-  box-shadow: 5px 5px 2px var(--theme-secondary);
+  box-shadow: 5px 5px 2px var(--theme-highlight);
   border-radius: 5%;
 }
 
@@ -116,6 +124,10 @@ $tablet: 768px;
   &:not(.center) {
     filter: blur(2px);
   }
+
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-evenly;
 }
 
 .carousel-button {
@@ -133,28 +145,37 @@ $tablet: 768px;
   }
 }
 
-.mountain-svg-container {
-  position: relative;
-  background-color: var(--theme-highlight);
+.svg-seperator {
+  height: 10vh;
   margin: 2%;
-  width: 200vw;
+  background-image: url(../images/hill.svg);
+  background-size: 100% auto;
+  background-position: bottom;
+}
+
+
+.repeating-svg-container {
+  // background-color: var(--theme-highlight);
+  width: 220vw;
   height: fit-content;
   display: flex;
   flex-direction: row;
-  animation: mountains 20s linear infinite;
+  animation: repeating 20s linear infinite;
 }
 
-.mountain-svg {
+.repeating-svg {
+  fill: #E5BD77;
   width: 20vw;
   height: 10vh;
 }
 
-@keyframes mountains {
+@keyframes repeating {
   0% {
-    transform: translateX(-50vw);
+    transform: translateX(-60vw);
   }
 
   100% {
-    transform: translateX(50vw);
+    transform: translateX(60vw);
   }
 }
+
