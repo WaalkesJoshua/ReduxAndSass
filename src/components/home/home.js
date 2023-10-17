@@ -25,6 +25,7 @@ import WebpackIcon from '../../images/webpack-icon.svg';
 
 export default function Home({ getCurrentSection }) {
   const { theme } = useTheme();
+  const windowWidth = window.innerWidth;
 
 
   const techStackData = [
@@ -56,12 +57,19 @@ export default function Home({ getCurrentSection }) {
     {body:"Authored a comprehensive regression testing suite, enabling efficient post-deployment end-to-end testing of critical API services, achieving 75% code coverage using Cucumber and TestNG"},
   ];
 
+  const overflowItems = (data) => {
+    const count = data.length % 3;
+    return data.splice(data.length - count, data.length);
+  };
+
+  const techsStackDataLastRow = overflowItems(techStackData);
+
   const style = {
   };
 
   useEffect(() => {
     getCurrentSection();
-  }, []);
+  }, [windowWidth]);
 
   return (
     <div
@@ -89,6 +97,14 @@ export default function Home({ getCurrentSection }) {
               const { title, body, iconSrc } = data;
               return (
                 <Card key={index} title={title} body={body} iconSrc={iconSrc} />
+              )
+            })}
+          </div>
+          <div className="lastRow">
+            {techsStackDataLastRow.map((data, index) => {
+              const { title, body, iconSrc, link, linkText } = data;
+              return (
+                <Card key={index} title={title} body={body} iconSrc={iconSrc} link={link} linkText={linkText} />
               )
             })}
           </div>

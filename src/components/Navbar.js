@@ -35,14 +35,14 @@ export default function Navbar({ sections, isMobile }) {
     >
       <span id="wave" />
       <Menu />
-      {isMobile ? null :
+      {isMobile || sections.length <= 1 ? null :
         <div id="navbar-button-container">
           <p className="jump-to-section">Jump To Section:</p>
-          {sections.map((section) => {
+          {sections.map((section, index) => {
             return (
               <button
                 className="section-nav-button"
-                key={section.id}
+                key={section.id + index}
                 onClick={() => scrollToSection(section.id)}
               >
                 {section.heading}

@@ -9,7 +9,7 @@
     "deploy": "gh-pages -d . -b gh-pages",
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon server.js",
-    "dev": "npx webpack --mode development",
+    "dev": "npx webpack --mode development --no-cache",
     "build": "npx webpack --mode production"
   },
   "author": "",

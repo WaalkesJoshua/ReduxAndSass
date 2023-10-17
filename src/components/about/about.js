@@ -1,27 +1,38 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import Carousel from '../utils/Carousel';
+import Seperator from '../utils/Seperator';
+import '../../styles/about.scss';
 
 
-export default function About ({getCurrentSection}) {
+export default function About({ getCurrentSection }) {
 
   useEffect(() => {
     getCurrentSection();
   }, []);
 
-  const aboutMeData = [
-    {title: "something about me", body: "aint that neat"},
-    {title: "something else", body: "wow"},
-    {title: "all about me", body: "how about that"},
-    {title: "me me me", body: "aint that cool"}
-  ];
+  const interestData = [];
+  const tripData = [];
+  const familyData = [];
+
+  
 
   return (
-    <>
-    <h1>About Page</h1>
-    <section id="aboutMeCarousel">
-      <h3>Fun Facts</h3>
-    <Carousel cardData={aboutMeData} />
-    </section>
-    </>
+    <div className="about-container">
+      <h1>Learn About Me</h1>
+      <section id="interest-carousel">
+        <h3>Interests</h3>
+        <Carousel cardData={interestData} />
+      </section>
+      <Seperator type="Biker"/>
+      <section id="trips-carousel">
+        <h3>Trips</h3>
+        <Carousel cardData={tripData} />
+      </section>
+      <Seperator type="Hiker"/>
+      <section id="family-carousel">
+        <h3>Family</h3>
+        <Carousel cardData={familyData} />
+      </section>
+    </div>
   )
 }

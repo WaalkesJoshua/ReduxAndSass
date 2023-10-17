@@ -1,0 +1,26 @@
+// Breakpoints
+$mobile: 480px;
+$tablet: 768px;
+
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  h1 {
+    color: var(--theme-altText);
+  }
+}
+
+.card-icons {
+  position: relative;
+  top: 10%;
+  left: 20%;
+  height: 60%;
+  width : 60%;
+  margin-top: 5%;
+}
