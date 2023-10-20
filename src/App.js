@@ -39,8 +39,7 @@ export default function App() {
       <Router basename="/MyPortfolio">
         <Navbar sections={sections} isMobile={isMobile} />
         <Routes>
-          <Route exact path='/home' element={< Home getCurrentSection={getCurrentSection} />} />
-          <Route path='*' element={< Navigate to='/home' />} />
+          <Route path='/' element={< Home getCurrentSection={getCurrentSection} />} />
           <Route exact path='/about' element={< About getCurrentSection={getCurrentSection} />} />
           <Route exact path='/contact' element={< Contact getCurrentSection={getCurrentSection} />} />
         </Routes>

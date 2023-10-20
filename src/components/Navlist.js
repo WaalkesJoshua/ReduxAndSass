@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 export function HomeLink({closeMenu}) {
   const navigate = useNavigate();
   const handleClick = () => {
-    navigate("/home");
+    navigate("/");
     closeMenu();
   }
   return (
