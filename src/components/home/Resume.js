@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
 import { useSelector, useDispatch } from 'react-redux';
 import { setError } from '../../slicers/resumeDataSlice';
+import '../../styles/home.scss';
 
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
@@ -50,20 +51,20 @@ export default function Resume() {
 
 
   return (
-    <div>
-      <Document
-        file={pdfBlobURL}
-      >
-        <Page
-          pageNumber={1}
-          width={pdfDimension.width}
-          renderTextLayer={false} // Disable text layer
-          renderAnnotationLayer={false} //Disable annotations
-        />
-      </Document>
+    <>
+        <Document
+          file={pdfBlobURL}
+        >
+          <Page
+            pageNumber={1}
+            width={pdfDimension.width}
+            renderTextLayer={false} // Disable text layer
+            renderAnnotationLayer={false} //Disable annotations
+          />
+        </Document>
       <button className="download-resume-button" onClick={downloadPDF}>Download</button>
       {isError &&
         <h6>Error Downloading Resume</h6>}
-    </ div>
+    </>
   );
 }

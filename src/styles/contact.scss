@@ -13,6 +13,10 @@ $tablet: 768px;
 
   h1 {
     color: var(--theme-altText);
+    background-color: var(--theme-secondary);
+    padding: 5px;
+    border-radius: 5%;
+    box-shadow: 5px 5px 5px var(--theme-shadow);
   }
 }
 

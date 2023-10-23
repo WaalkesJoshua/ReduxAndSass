@@ -23,7 +23,7 @@ export default function Menu() {
       </button>
       {menuOpen && createPortal(
         <div id="menu-list">
-          <ThemeToggle />
+          <ThemeToggle closeMenu={handleMenuClick} />
           <HomeLink closeMenu={handleMenuClick} />
           <ContactLink closeMenu={handleMenuClick}/>
           <AboutLink closeMenu={handleMenuClick}/>

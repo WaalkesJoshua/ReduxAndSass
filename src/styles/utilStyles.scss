@@ -63,9 +63,11 @@ $tablet: 768px;
 .card {
   height: 20vh;
   width: 20vw;
-  background-color: var(--theme-secondary);
-  border: solid 2px var(--theme-highlight);
+  background-color: var(--global-background);
+  border: solid 2px var(--theme-shadow);
   border-radius: 10% 3%;
+  padding: 5px;
+  box-shadow: 5px 5px 5px 2px var(--theme-shadow);
   margin: 2vh;
   display: flex;
   flex-direction: column;
@@ -75,7 +77,7 @@ $tablet: 768px;
     position: relative;
     left: 32.5%;
     height: 35%;
-    width : 35%;
+    width: 35%;
     margin-top: 5%;
   }
 
@@ -89,7 +91,7 @@ $tablet: 768px;
     font-weight: bold;
     text-wrap: pretty;
 
-    @media(max-width: $mobile){
+    @media(max-width: $mobile) {
       font-size: 20px;
     }
   }
@@ -104,24 +106,28 @@ $tablet: 768px;
   }
 
   .card-link {
-    position: relative;
-    left: 5%;
-    width: 90%;
+    align-self: center;
+    width: fit-content;
     margin-bottom: 3%;
     text-align: center;
     text-wrap: pretty;
     word-wrap: break-word;
     text-decoration: none;
     color: var(--theme-text);
+
+    &:hover {
+      border-bottom: 2px dashed var(--theme-secondary);
+      box-shadow: 0 0 5px 5px var(--theme-shadow);
+    }
   }
 }
 
 .paper {
   width: 75%;
   height: 90%;
-  background-color: var(--theme-button);
+  background-color: var(--theme-primary);
   margin: 2%;
-  box-shadow: 5px 5px 2px var(--theme-highlight);
+  box-shadow: 7px 7px 5px var(--theme-shadow);
   border-radius: 5%;
 }
 
@@ -133,7 +139,7 @@ $tablet: 768px;
   margin: 2vh;
   background-color: var(--theme-primary);
   border-radius: 5%;
-  box-shadow: 5px 5px 2px var(--theme-highlight);
+  box-shadow: 7px 7px 5px var(--theme-shadow);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -141,7 +147,7 @@ $tablet: 768px;
 
 .slides {
   width: 75%;
-  background-color: var(--global-background);
+  background-color: var(--theme-secondary);
   border-radius: 5%;
   display: flex;
   justify-content: center;
@@ -156,13 +162,10 @@ $tablet: 768px;
     transform: scale(1.2);
     filter: none;
   }
+
   &:not(.center) {
     filter: blur(2px);
   }
-
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: space-evenly;
 }
 
 .carousel-button {
@@ -186,6 +189,7 @@ $tablet: 768px;
   background-image: url(../images/hill.svg);
   background-size: 100% auto;
   background-position: bottom;
+  box-shadow: 0 0 5px 5px var(--theme-shadow);
 }
 
 
@@ -213,4 +217,3 @@ $tablet: 768px;
     transform: translateX(60vw);
   }
 }
-

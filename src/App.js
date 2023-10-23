@@ -30,6 +30,7 @@ export default function App() {
     '--theme-highlight': theme.highlight,
     '--theme-error': theme.error,
     '--theme-button': theme.button,
+    '--theme-shadow': theme.boxShadow,
     '--theme-text': theme.text,
     '--theme-altText': theme.altText
   }

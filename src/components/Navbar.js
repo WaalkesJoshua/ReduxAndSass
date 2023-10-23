@@ -33,7 +33,6 @@ export default function Navbar({ sections, isMobile }) {
       id="navbar"
       style={style}
     >
-      <span id="wave" />
       <Menu />
       {isMobile || sections.length <= 1 ? null :
         <div id="navbar-button-container">
