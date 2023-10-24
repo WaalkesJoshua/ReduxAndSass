@@ -3,10 +3,12 @@ import './styles/globalStyles.scss';
 import './styles/utilStyles.scss';
 import { BrowserRouter as Router, Routes, Route, Link, Navigate, redirect } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import Home from './components/home/Home';
 import About from './components/about/About';
 import Contact from './components/Contact/Contact';
 import { useTheme } from './styles/ThemeProvider';
+
 
 
 export default function App() {
@@ -44,6 +46,7 @@ export default function App() {
           <Route exact path='/about' element={< About getCurrentSection={getCurrentSection} />} />
           <Route exact path='/contact' element={< Contact getCurrentSection={getCurrentSection} />} />
         </Routes>
+        <Footer/>
       </Router>
     </div>
   )

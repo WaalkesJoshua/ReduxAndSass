@@ -14,7 +14,7 @@ export default function Contact({ getCurrentSection }) {
 
   let contactData = [
     { title: 'LinkedIn', link: 'https://www.linkedin.com/in/joshua-waalkes', linkText:'My LinkedIn', iconSrc: LinkedIn},
-    { title: 'Github', link: 'https://github.com/WaalkesJoshua?tab=repositories', linkText: "My Github", iconSrc: Github},
+    { title: 'Github', link: 'https://github.com/WaalkesJoshua/MyPortfolio', linkText: "Source Code", iconSrc: Github},
     { title: 'Email', link: `mailto:josh.waalkes21@gmail.com?subject=Saying%20Hello&body=${emailBody}`, linkText: 'Email me @ \n Josh.Waalkes21@gmail.com', iconSrc: Gmail},
     { title: 'Phone', body: 'Call or Text! 970-623-9866', iconSrc: Iphone},
   ];
