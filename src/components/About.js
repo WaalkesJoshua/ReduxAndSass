@@ -1,25 +1,25 @@
 import React, { useEffect } from 'react';
-import Carousel from '../utils/Carousel';
-import Paper from '../utils/Paper';
-import Seperator from '../utils/Seperator';
-import '../../styles/about.scss';
-import anglesLanding from '../../images/jpgs/angels-landing.jpg';
-import archJump from '../../images/jpgs/arch-jump.jpg';
-import coupleBridge from '../../images/jpgs/couple-bridge.jpg';
-import coupleQuandry from '../../images/jpgs/couple-quandry.jpg';
-import goggles from '../../images/jpgs/goggles.jpg';
-import jaimeBackpack from '../../images/jpgs/jaime-backpack.jpg';
-import jaimeHammock from '../../images/jpgs/jaime-hammock.jpg';
-import jeepTree from '../../images/jpgs/jeep-tree.jpg';
-import laSals from '../../images/jpgs/laSals.jpg';
-import libertyGoats from '../../images/jpgs/liberty-goats.jpg';
-import palisadeRim from '../../images/jpgs/palisade-rim.jpg';
-import quandrySummit from '../../images/jpgs/quandry-summit.jpg';
-import wilsonCamp from '../../images/jpgs/wilson-peak-camp.jpg';
-import wilsonLake from '../../images/jpgs/wilson-peak-lake.jpg';
-import estherPumpkin from '../../images/jpgs/esther-pumkins.jpeg';
-import familyWedding from '../../images/jpgs/family-wedding.jpeg';
-import joshEsther from '../../images/jpgs/josh-esther.jpeg';
+import Carousel from './utils/Carousel';
+import Paper from './utils/Paper';
+import Seperator from './utils/Seperator';
+import '../styles/about.scss';
+import anglesLanding from '../images/jpgs/angels-landing.jpg';
+import archJump from '../images/jpgs/arch-jump.jpg';
+import coupleBridge from '../images/jpgs/couple-bridge.jpg';
+import coupleQuandry from '../images/jpgs/couple-quandry.jpg';
+import goggles from '../images/jpgs/goggles.jpg';
+import jaimeBackpack from '../images/jpgs/jaime-backpack.jpg';
+import jaimeHammock from '../images/jpgs/jaime-hammock.jpg';
+import jeepTree from '../images/jpgs/jeep-tree.jpg';
+import laSals from '../images/jpgs/laSals.jpg';
+import libertyGoats from '../images/jpgs/liberty-goats.jpg';
+import palisadeRim from '../images/jpgs/palisade-rim.jpg';
+import quandrySummit from '../images/jpgs/quandry-summit.jpg';
+import wilsonCamp from '../images/jpgs/wilson-peak-camp.jpg';
+import wilsonLake from '../images/jpgs/wilson-peak-lake.jpg';
+import estherPumpkin from '../images/jpgs/esther-pumkins.jpeg';
+import familyWedding from '../images/jpgs/family-wedding.jpeg';
+import joshEsther from '../images/jpgs/josh-esther.jpeg';
 
 
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ThemeToggle from './utils/ThemeToggle';
+import ThemeToggle from './ThemeToggle';
 import { HomeLink, AboutLink, ContactLink } from './Navlist';
 import { MdDensityMedium as MenuIcon } from 'react-icons/md';
 import { createPortal } from 'react-dom';

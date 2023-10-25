@@ -4,9 +4,9 @@ import './styles/utilStyles.scss';
 import { BrowserRouter as Router, Routes, Route, Link, Navigate, redirect } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import Home from './components/home/Home';
-import About from './components/about/About';
-import Contact from './components/Contact/Contact';
+import Home from './components/Home';
+import About from './components/About';
+import Contact from './components/Contact';
 import { useTheme } from './styles/ThemeProvider';
 
 

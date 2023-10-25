@@ -1,6 +1,5 @@
 import React from 'react';
-import { HomeLink, AboutLink, ContactLink } from './Navlist';
-import Menu from './Menu';
+import Menu from './utils/Menu';
 import { useTheme } from '../styles/ThemeProvider';
 import '../styles/navbar.scss';
 

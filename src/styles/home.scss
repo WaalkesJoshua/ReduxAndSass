@@ -2,6 +2,7 @@
 $mobile: 480px;
 $tablet: 768px;
 
+@import './globalStyles.scss';
 
 .home-container {
   display: flex;
@@ -12,16 +13,12 @@ $tablet: 768px;
   overflow-x: hidden;
 
   h1 {
-    color: var(--theme-altText);
-    background-color: var(--theme-secondary);
-    padding: 5px;
-    border-radius: 5%;
-    box-shadow: 5px 5px 5px var(--theme-shadow);
-  }
+    @include page-header;
+    }
 }
 
 .react-pdf__Document {
-  box-shadow: 7px 7px 7px var(--theme-shadow);
+  box-shadow: 0 7px 10px 3px  var(--theme-shadow);
   border-radius: 5%;
 }
 

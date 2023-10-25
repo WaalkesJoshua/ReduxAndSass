@@ -1,26 +1,26 @@
 import React, { useEffect, Suspense } from 'react';
-const Resume = React.lazy(() => import('./Resume'));
-import '../../styles/home.scss';
-import { useTheme } from '../../styles/ThemeProvider';
-import Seperator from '../utils/Seperator';
-import Carousel from '../utils/Carousel';
-import Paper from '../utils/Paper';
-import Card from '../utils/Card';
-import JSIcon from '../../images/javascript.svg';
-import ReactIcon from '../../images/react.svg';
-import ReduxIcon from '../../images/redux.svg';
-import CSS3Icon from '../../images/css3.svg';
-import SassIcon from '../../images/sass.svg';
-import HTML5Icon from '../../images/html5.svg';
-import NodeJSIcon from '../../images/nodejs.svg';
-import ExpressIcon from '../../images/express.svg';
-import JavaIcon from '../../images/java.svg';
-import SpringIcon from '../../images/spring.svg';
-import PostgreIcon from '../../images/postgresql.svg';
-import JestIcon from '../../images/jest.svg';
-import BabelIcon from '../../images/babel.svg';
-import MavenIcon from '../../images/apache-maven.svg';
-import WebpackIcon from '../../images/webpack-icon.svg';
+const Resume = React.lazy(() => import('./utils/Resume'));
+import '../styles/home.scss';
+import { useTheme } from '../styles/ThemeProvider';
+import Seperator from './utils/Seperator';
+import Carousel from './utils/Carousel';
+import Paper from './utils/Paper';
+import Card from './utils/Card';
+import JSIcon from '../images/javascript.svg';
+import ReactIcon from '../images/react.svg';
+import ReduxIcon from '../images/redux.svg';
+import CSS3Icon from '../images/css3.svg';
+import SassIcon from '../images/sass.svg';
+import HTML5Icon from '../images/html5.svg';
+import NodeJSIcon from '../images/nodejs.svg';
+import ExpressIcon from '../images/express.svg';
+import JavaIcon from '../images/java.svg';
+import SpringIcon from '../images/spring.svg';
+import PostgreIcon from '../images/postgresql.svg';
+import JestIcon from '../images/jest.svg';
+import BabelIcon from '../images/babel.svg';
+import MavenIcon from '../images/apache-maven.svg';
+import WebpackIcon from '../images/webpack-icon.svg';
 
 
 export default function Home({ getCurrentSection }) {
@@ -85,7 +85,7 @@ export default function Home({ getCurrentSection }) {
       </section>
       <Seperator type="Hiker" />
       <section id="highlights-section">
-        <h3>Highlights</h3>
+        <h3>Experience & Accomplishments</h3>
         <Carousel id="highlight-car" cardData={highlightData} />
       </section>
       <Seperator type="Biker" />

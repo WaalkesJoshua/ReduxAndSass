@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
-import Paper from '../utils/Paper';
-import Card from '../utils/Card';
-import '../../styles/contact.scss';
-import LinkedIn from '../../images/linkedin.svg';
-import Github from '../../images/github.svg';
-import Gmail from '../../images/gmail.svg';
-import Iphone from '../../images/iphone.svg';
+import Paper from './utils/Paper';
+import Card from './utils/Card';
+import '../styles/contact.scss';
+import LinkedIn from '../images/linkedin.svg';
+import Github from '../images/github.svg';
+import Gmail from '../images/gmail.svg';
+import Iphone from '../images/iphone.svg';
 
 
 export default function Contact({ getCurrentSection }) {

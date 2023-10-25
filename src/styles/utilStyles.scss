@@ -2,41 +2,7 @@
 $mobile: 480px;
 $tablet: 768px;
 
-#wavy-seperator {
-  position: relative;
-  margin: 2%;
-  width: 200vw;
-  height: fit-content;
-  display: flex;
-  flex-direction: row;
-  animation: wave 20s linear infinite;
-}
-
-@mixin seperator-styles {
-  width: 5vw;
-  height: 2vw;
-  border-radius: 50%;
-}
-
-.wavy-sep-top {
-  @include seperator-styles;
-  border-top: 5px solid var(--theme-secondary);
-}
-
-.wavy-sep-bottom {
-  @include seperator-styles;
-  border-bottom: 5px dashed var(--theme-secondary);
-}
-
-@keyframes wave {
-  0% {
-    transform: translateX(-50vw);
-  }
-
-  100% {
-    transform: translateX(50vw);
-  }
-}
+@import './globalStyles.scss';
 
 .card-data-grid {
   position: relative;
@@ -44,11 +10,8 @@ $tablet: 768px;
   margin: 5% 5% 0 5%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  // grid-auto-rows: 2fr;
-  // grid-column: span 1;
   justify-content: center;
   align-content: center;
-
 }
 
 .lastRow {
@@ -123,15 +86,16 @@ $tablet: 768px;
 }
 
 .paper {
+  @include common-shadow;
   width: 75%;
   height: 90%;
   background-color: var(--theme-primary);
   margin: 2%;
-  box-shadow: 7px 7px 5px var(--theme-shadow);
   border-radius: 5%;
 }
 
 .carousel-container {
+  @include common-shadow;
   position: relative;
   width: 80%;
   height: 40vh;
@@ -139,7 +103,6 @@ $tablet: 768px;
   margin: 2vh;
   background-color: var(--theme-primary);
   border-radius: 5%;
-  box-shadow: 7px 7px 5px var(--theme-shadow);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -189,7 +152,7 @@ $tablet: 768px;
   background-image: url(../images/hill.svg);
   background-size: 100% auto;
   background-position: bottom;
-  box-shadow: 0 0 5px 5px var(--theme-shadow);
+  box-shadow: 0 0 5px 2px var(--theme-shadow);
 }
 
 

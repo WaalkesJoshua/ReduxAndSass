@@ -1,3 +1,33 @@
+@mixin button-styles {
+  background-color: var(--theme-button);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 5px 5px 5px var(--theme-shadow);
+  cursor: pointer;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+
+  &:hover {
+    background-color: var(--theme-highlight);
+    box-shadow: 0 0 5px 5px var(--theme-highlight);
+  }
+}
+
+@mixin common-shadow {
+  box-shadow: 0 5px 8px 3px var(--theme-shadow);
+}
+
+@mixin page-header {
+  @include common-shadow;
+  color: var(--theme-altText);
+  background-color: var(--theme-secondary);
+  padding: 5px 10px;
+  border-radius: 5%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
 #root {
   height: 100%;
   width: 100%;
@@ -7,6 +37,7 @@ body,
 html {
   margin: 0;
   padding: 0;
+  font-family: 'Albert Sans', sans-serif;
 }
 
 * {
@@ -22,19 +53,6 @@ html {
   background-size: 25vw;
 }
 
-@mixin button-styles {
-  background-color: var(--theme-button);
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  box-shadow: 5px 5px 5px var(--theme-shadow);
-  cursor: pointer;
-
-  &:hover {
-    background-color: var(--theme-highlight);
-    box-shadow: 0 0 5px 5px var(--theme-highlight);
-  }
-}
 
 // Usage example: Apply the button-styles mixin to a button
 button {
@@ -53,8 +71,11 @@ section {
   h3 {
     color: var(--theme-altText);
     background-color: var(--theme-secondary);
-    padding: 5px;
+    padding: 5px 10px;
     border-radius: 5%;
-    box-shadow: 5px 5px 5px 2px var(--theme-shadow);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+
+    @include common-shadow;
   }
 }

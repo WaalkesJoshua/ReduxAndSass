@@ -2,6 +2,7 @@
 $mobile: 480px;
 $tablet: 768px;
 
+@import './globalStyles.scss';
 
 .about-container {
   position: relative;
@@ -13,11 +14,7 @@ $tablet: 768px;
   overflow-x: hidden;
 
   h1 {
-    color: var(--theme-altText);
-    background-color: var(--theme-secondary);
-    padding: 5px;
-    border-radius: 5%;
-    box-shadow: 5px 5px 5px var(--theme-shadow);
+    @include page-header;
   }
 }
 
