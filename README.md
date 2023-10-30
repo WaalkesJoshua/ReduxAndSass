@@ -40,7 +40,7 @@ Check localhost:3000/MyPortfolio to verify app is running locally. You should se
 ## Future Enhancements
   - Add more color themes as options
   - Create a reviews and comments section in contact me
-  - List about me photos in infinite scroll wheel
+  - List "about me" photos in infinite scroll wheel
   
 ## Tech Stack Used
 
@@ -57,10 +57,9 @@ Check localhost:3000/MyPortfolio to verify app is running locally. You should se
 <img src="https://img.shields.io/badge/Babel-F9DC3E?style=for-the-badge&logo=babel&logoColor=white" />
 
 ## Authored By: 
-  Josh Waalkes
-  [Find Me On LinkedIn](https://www.linkedin.com/in/joshua-waalkes-838526240)
 
-  <a href="https://www.linkedin.com/in/joshua-waalkes-838526240" target="_blank">Opens in new tab</a>
+ Josh Waalkes [Find Me On LinkedIn](https://www.linkedin.com/in/joshua-waalkes-838526240)
+  
   
 #### Happy coding!
 
