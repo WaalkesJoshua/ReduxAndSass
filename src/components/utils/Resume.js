@@ -12,7 +12,7 @@ export default function Resume() {
   const [pdfDimension, setPdfDimensions] = useState({ width: 0 })
   const isError = useSelector((state) => state.resume.isError);
   const dispatch = useDispatch();
-  const pdfPath = 'https://waalkesjoshua.github.io/MyPortfolio/Joshua_Waalkes_Resume.pdf';
+  const pdfPath = 'https://waalkesjoshua.github.io/MyPortfolio/Josh-Waalkes-Resume.pdf';
 
   const downloadPDF = async () => {
     const a = document.createElement('a');
