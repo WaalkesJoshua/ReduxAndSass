@@ -24,7 +24,8 @@ $tablet: 768px;
 }
 
 .card {
-  height: 20vh;
+  height: auto;
+  min-height: 20vh;
   width: 20vw;
   background-color: var(--global-background);
   border: solid 2px var(--theme-shadow);
@@ -83,7 +84,9 @@ $tablet: 768px;
       box-shadow: 0 0 5px 5px var(--theme-shadow);
     }
   }
+
 }
+
 
 .paper {
   @include common-shadow;
@@ -94,57 +97,82 @@ $tablet: 768px;
   border-radius: 5%;
 }
 
+.slick-slider {
+  position: relative;
+  left: 5%;
+  width: 90%;
+  height: auto;
+  // display: flex;
+  // justify-content:space-between;
+  // align-items: center;
+}
+
+.slick-list {
+  height: auto;
+}
+
+.slick-track {
+  height:auto;
+  // display: flex;
+  // justify-content:space-between;
+  // align-items: center;
+}
+
+.slick-slide {
+  height: fit-content;
+}
+
+.slick-arrow  {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.slick-dots  {
+  bottom: -15% !important;
+  li {
+    background: transparent;
+  }
+  button {
+    box-shadow: none
+  }
+}
+
 .carousel-container {
   @include common-shadow;
   position: relative;
   width: 80%;
-  height: 40vh;
-  padding: 1%;
-  margin: 2vh;
+  height: fit-content;
+  min-height: 25vh;
+  margin: 5vh;
   background-color: var(--theme-primary);
   border-radius: 5%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
-.slides {
-  width: 75%;
-  background-color: var(--theme-secondary);
-  border-radius: 5%;
-  display: flex;
-  justify-content: center;
-  gap: 5%;
-  overflow: hidden;
-}
+// .slides {
+//   width: 75%;
+//   background-color: var(--theme-secondary);
+//   border-radius: 5%;
+//   display: flex;
+//   justify-content: center;
+//   gap: 5%;
+//   overflow: hidden;
+// }
 
-.carousel-card {
-  margin: 5%;
+// .carousel-card {
+//   margin: 5%;
 
-  &.center {
-    transform: scale(1.2);
-    filter: none;
-  }
+//   &.center {
+//     transform: scale(1.2);
+//     filter: none;
+//   }
 
-  &:not(.center) {
-    filter: blur(2px);
-  }
-}
+//   &:not(.center) {
+//     filter: blur(2px);
+//   }
+// }
 
-.carousel-button {
-  font-size: 1.4em;
-  border-radius: 2%;
-  width: 7%;
-  height: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-
-  p {
-    margin: 0;
-  }
-}
 
 .svg-seperator {
   height: 10vh;

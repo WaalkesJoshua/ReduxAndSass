@@ -49,7 +49,6 @@ export default function About({ getCurrentSection }) {
         <h3>Interests</h3>
         <Carousel cardData={interestData} />
       </section>
-      <Seperator type="Biker" />
       <section id="trips-family">
         <h3>Trips And Family</h3>
         <div className="pic-columns">

@@ -26,7 +26,7 @@ export default function App() {
   }
 
   const style = {
-    '--global-background': theme.background,
+    '--global-background': theme.background, //
     '--theme-primary': theme.primary,
     '--theme-secondary': theme.secondary,
     '--theme-highlight': theme.highlight,

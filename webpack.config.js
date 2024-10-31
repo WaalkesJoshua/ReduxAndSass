@@ -7,7 +7,7 @@ module.exports = {
 
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname),
+    path: path.join(__dirname, '/dist/'),
     filename: 'bundle.js'
   },
   optimization: {
@@ -25,12 +25,13 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(png|jpe?g|gif|woff2|woff|eot|ttf)$/i,
         use: [
           {
             loader: 'file-loader',
           },
         ],
+        include: [ path.join(__dirname, '/node_modules/'), path.join(__dirname, 'src') ],
       },
       {
         test: /\.(js|jsx)$/,
@@ -40,12 +41,13 @@ module.exports = {
         }
       },
       {
-        test: /\.scss$/,
+        test: /\.scss|css$/,
         use: [
           'style-loader',
           'css-loader',
           'sass-loader'
-        ]
+        ],
+        include: [ path.join(__dirname, 'src'), /node_modules/ ],
       },
       {
         test: /\.svg$/,

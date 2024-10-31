@@ -1,6 +1,9 @@
 import React, { useEffect, Suspense } from 'react';
 const Resume = React.lazy(() => import('./utils/Resume'));
 import '../styles/home.scss';
+
+
+
 import { useTheme } from '../styles/ThemeProvider';
 import Seperator from './utils/Seperator';
 import Carousel from './utils/Carousel';
@@ -83,12 +86,10 @@ export default function Home({ getCurrentSection }) {
           < Resume />
         </Suspense>
       </section>
-      <Seperator type="Hiker" />
       <section id="highlights-section">
         <h3>Experience & Accomplishments</h3>
         <Carousel id="highlight-car" cardData={highlightData} />
       </section>
-      <Seperator type="Biker" />
       <section id="tech-stack-section">
         <h3>Tech Stack</h3>
         <Paper>

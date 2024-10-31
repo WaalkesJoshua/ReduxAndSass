@@ -12,14 +12,14 @@
 // };
 
 export const darkColors = {
-  background: '#2D2D2D', // Dark Beige
+  background: '#2D2D2D', // Dark Gray
   primary: '#5e0f01', // Dark Salmon
   secondary: '#51a1c9', // soft light Blue
   highlight: '#333333', // Dark Gray
-  error: '#6F2A16', // Dark Earthy Red
-  button: '#1E5C85', // Dark Earthy Blue
+  error: '#6F2A16', // Dark Earthy Red/Brown
+  button: '#1E5C85', // Dark Earthy Blue 
   boxShadow: '#FFFBF0', // Lighter Beige
-  text: '#F0F0F0', // Light Gray
+  text: '#F0F0F0', // Very Light Gray/beige
   altText: '#24201f', // black
   // '#1E5C85', // Dark Earthy Blue
   // '#29728F', // Darker Light Blue
