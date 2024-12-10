@@ -47,11 +47,7 @@ html {
 .app {
   color: var(--theme-text);
   min-height: 100vh;
-  // background-color: var(--global-background);
   background: linear-gradient(to bottom right,var(--global-background), var(--theme-secondary) );
-  // background-image: url("../images/camp_badge.svg");
-  // background-repeat: repeat-x repeat-y;
-  // background-size: 25vw;
 }
 
 
